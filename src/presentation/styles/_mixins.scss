@@ -1,0 +1,58 @@
+@mixin flex($gap: 0rem) {
+    display: flex;
+    gap: $gap;
+}
+
+@mixin flex-col($gap: 0rem) {
+    display: flex;
+    gap: $gap;
+    flex-direction: column;
+}
+
+@mixin base-btn($fontSize: 1em) {
+    @include transition();
+    font-size: $fontSize;
+    border: 0;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+
+    &:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+@mixin base-input($width: 12rem) {
+    @include transition();
+    font-size: 1em;
+    border: 0;
+    border-bottom: 1px solid black;
+    padding: .5rem;
+    width: $width;
+    background-color: white;
+
+    &:focus {
+        outline: none;
+        border: 1px solid black;
+        background-color: white;
+    }
+}
+
+@mixin transition {
+    transition: all ease-in 0.3s;
+}
+
+@mixin btn1 {
+    border: 0ch;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: v.$color1;
+    @include transition();
+
+    &:hover {
+        background: v.$color1hover;
+    }
+}
