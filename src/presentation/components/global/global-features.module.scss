@@ -1,0 +1,24 @@
+@use "../../styles/mixins" as m;
+
+.nav_container {
+    @include m.transition();
+    @include m.flex();
+    background: rgb(255, 255, 255, 0.39);
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    padding-inline: 2rem;
+    border-bottom: 2px solid black;
+    z-index: 50;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(8.5px);
+
+    :first-child {
+        @include m.flex(1rem);
+    }
+}
+
+.logout {
+    @include m.base-btn(1.3em);
+}
