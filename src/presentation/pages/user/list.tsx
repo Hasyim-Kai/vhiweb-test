@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { fetchUsers } from '../../../infrastructure/user'
 import UserListItem from '../../components/features/user/UserListItem'
 import { User } from '../../../infrastructure/model/user'
-import scrollToTop from '../../../util/ScrollToTop'
+import scrollToTop from '../../../util/scrollToTop'
 
 
 export default function UserList() {
@@ -20,7 +20,8 @@ export default function UserList() {
   return <DefaultLayout>
     {isLoading ? <div>Loading</div>
       : error ? <div>Error</div>
-        : data.data.map((user: User, index: number) => <UserListItem key={index} user={user} />)}
+        : data.data.length === 0 ? <div>Cannot Found User</div>
+          : data.data.map((user: User, index: number) => <UserListItem key={index} user={user} />)}
 
     <button onClick={previousPage}>back</button>
     <button onClick={nextPage}>next</button>
