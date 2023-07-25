@@ -2,6 +2,7 @@ import { useMutation } from "react-query";
 import { fetchLogin, loginInput } from "../../infrastructure/user";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import s from "./login.module.scss";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -25,16 +26,19 @@ export default function Login() {
     navigate(`/user`);
   }
 
-  return <main>
-    <img src="/img/auth-counselor-bg.png" alt="login bg" />
-    <form onSubmit={handleSubmit}>
+  return <main className={s.container}>
+    <form onSubmit={handleSubmit} className={s.form}>
       {isLoading ? <div>Loading</div>
         : error ? <div>Error</div>
           : <>
-            <input name="email" type="email" onChange={handleInput} />
-            <input name="password" type="password" onChange={handleInput} />
+            <h1>Login</h1>
+            <input name="email" type="email" placeholder="Enter your Email" onChange={handleInput} required />
+            <input name="password" type="password" placeholder="Enter your Password" onChange={handleInput} required />
             <button type="submit">Login</button>
           </>}
     </form>
+    <div className={s.banner}>
+      <img src="/img/auth-counselor-bg.png" alt="login bg" />
+    </div>
   </main>
 }

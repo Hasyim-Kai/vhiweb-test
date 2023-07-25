@@ -1,0 +1,33 @@
+@use "../styles/mixins" as m;
+
+.container {
+    overflow: hidden;
+    height: 100vh;
+    @include m.flex();
+}
+
+.banner {
+    width: 65%;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.form {
+    width: 35%;
+    padding: 2rem;
+    @include m.flex-col(1.5rem);
+    align-items: center;
+
+    input {
+        @include m.base-input(19rem);
+    }
+
+    button {
+        @include m.base-btn(1.3em);
+        border-bottom: 2px solid black;
+    }
+}

@@ -11,7 +11,7 @@ export default function UserDetail() {
     queryFn: () => fetchUsersDetail(id),
   })
 
-  return <DefaultLayout>
+  return <DefaultLayout isBack>
     <Link to={-1}>Go back</Link>
     {isLoading ? <div>Loading</div>
       : error ? <div>Error</div>
