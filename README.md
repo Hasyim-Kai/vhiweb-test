@@ -1,1 +1,17 @@
-4 jam 0m
+# VhiWEB Test
+Development Time : -+ 6 jam
+### Build with 
+- React
+- SCSS
+- React Query for great Data fetching
+- Clean Architecture
+- Mobile First Responsive
+
+### API
+https://reqres.in/
+
+### Page
+- Path: / - Login → menampilkan form login yang berisi email dan password
+- Path: /users - Login → menampilkan daftar user dalam bentuk list.
+- Path: /users/{id} - Login → menampilkan detail user.
+- Path: /* - 404 → menampilkan halaman yang tidak ada di dalam app.
