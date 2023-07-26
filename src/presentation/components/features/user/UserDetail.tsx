@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { fetchUsersDetail } from "../../../../infrastructure/user";
 import DefaultLayout from "../../../layout/default";
 import s from "./user.module.scss";
+import scrollToTop from "../../../../util/scrollToTop";
+import { useEffect } from "react";
 
 export default function UserDetail() {
     const { id } = useParams();
@@ -10,6 +12,10 @@ export default function UserDetail() {
         queryKey: ["user-list", id],
         queryFn: () => fetchUsersDetail(id),
     })
+    useEffect(() => {
+      scrollToTop()
+    }, [])
+    
 
     return <DefaultLayout isBack>
         {isLoading ? <div>Loading</div>
