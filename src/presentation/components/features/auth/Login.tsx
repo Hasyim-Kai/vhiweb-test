@@ -24,7 +24,7 @@ export default function Login() {
   }
   if (isSuccess) {
     localStorage.setItem("token", data.token);
-    navigate(`/user`);
+    navigate(`/users`);
   }
 
   return <main className={s.container}>
