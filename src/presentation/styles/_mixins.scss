@@ -1,3 +1,9 @@
+@mixin grid($gap: 0rem, $col: 1) {
+    display: grid;
+    gap: $gap;
+    grid-template-columns: repeat($col, 1fr);
+}
+
 @mixin flex($gap: 0rem) {
     display: flex;
     gap: $gap;
@@ -15,7 +21,7 @@
     border: 0;
     padding: .5rem 1rem;
     cursor: pointer;
-    background-color: white;
+    background: none;
     color: black;
 
     &:hover {
@@ -31,7 +37,7 @@
     border-bottom: 1px solid black;
     padding: .5rem;
     width: $width;
-    background-color: white;
+    background: none;
 
     &:focus {
         outline: none;
@@ -44,15 +50,8 @@
     transition: all ease-in 0.3s;
 }
 
-@mixin btn1 {
-    border: 0ch;
-    color: white;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background: v.$color1;
-    @include transition();
-
-    &:hover {
-        background: v.$color1hover;
-    }
+@mixin shadow {
+    box-shadow: 0px 10px 55px 21px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 10px 55px 21px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0px 10px 55px 21px rgba(0, 0, 0, 0.06);
 }

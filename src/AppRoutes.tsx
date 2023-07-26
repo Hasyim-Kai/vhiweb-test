@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Login from './presentation/pages/login'
-import UserList from './presentation/pages/user/list'
-import UserDetail from './presentation/pages/user/detail'
 import NoPage from './presentation/pages/user/404'
+import Login from './presentation/pages/login'
+import UserDetail from './presentation/pages/user/detail'
+import UserList from './presentation/pages/user/list'
 
 
 export default function AppRoutes() {
