@@ -1,6 +1,6 @@
 # VhiWEB Test
 https://vhiweb-test-pi.vercel.app
-Development Time : -+ 6 jam
+Development Time : -+ 6 jam 30 m
 ### Build with 
 - React
 - SCSS
