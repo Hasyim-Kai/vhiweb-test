@@ -66,8 +66,9 @@
 
 @media screen and (min-width: 768px) {
     .list_container {
-        padding: 2rem 0;
-        @include m.grid(1rem, 3);
+        margin-inline: auto;
+        padding: 2rem 1rem;
+        @include m.grid(1rem, auto-fit, 20rem);
     }
 
     .detail_container {

@@ -1,7 +1,7 @@
-@mixin grid($gap: 0rem, $col: 1) {
+@mixin grid($gap: 0rem, $col: 1, $width: 1fr) {
     display: grid;
     gap: $gap;
-    grid-template-columns: repeat($col, 1fr);
+    grid-template-columns: repeat($col, $width);
 }
 
 @mixin flex($gap: 0rem) {
