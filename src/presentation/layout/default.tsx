@@ -17,7 +17,7 @@ export default function DefaultLayout({ children, isBack = false }: Props) {
   }, [])
 
   return <main>
-    <Navbar isBack={isBack}/>
+    <Navbar isBack={isBack} />
     <div className={s.default}>{children}</div>
   </main>
 }

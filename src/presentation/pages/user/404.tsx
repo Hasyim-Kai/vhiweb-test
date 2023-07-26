@@ -1,7 +1,5 @@
-import DefaultLayout from "../../layout/default";
+import NotFound404 from "../../components/global/404";
 
 export default function NoPage() {
-    return <DefaultLayout>
-        <div>404</div>
-    </DefaultLayout>
+    return <NotFound404 />
 }

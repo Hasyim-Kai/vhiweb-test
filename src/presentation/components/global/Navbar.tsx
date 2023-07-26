@@ -1,4 +1,3 @@
-import { useState } from "react";
 import s from "./global-features.module.scss";
 import { useNavigate } from "react-router-dom";
 
@@ -10,7 +9,6 @@ export default function Navbar({ isBack }: Props) {
     const navigate = useNavigate();
     function back() { navigate(-1) }
     function logout() { localStorage.removeItem("token"); navigate(`/`) }
-    const [isNavOpen, setIsNavOpen] = useState<boolean>(false)
 
     return <nav className={s.nav_container}>
         {isBack ? <div>
