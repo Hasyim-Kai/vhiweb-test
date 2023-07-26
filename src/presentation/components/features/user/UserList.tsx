@@ -25,7 +25,7 @@ export default function UserList() {
                         : data.data.map((user: User, index: number) => <UserListItem key={index} user={user} />)}
         </section>
         <section className={s.page_btn}>
-            <button onClick={previousPage}>back</button>
+            {page > 1 && <button onClick={previousPage}>back</button>}
             <button onClick={nextPage}>next</button>
         </section>
     </DefaultLayout>
