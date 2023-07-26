@@ -21,6 +21,7 @@
     padding: 2rem;
     @include m.flex-col(1.5rem);
     align-items: center;
+    justify-content: center;
 
     input {
         @include m.base-input(19rem);

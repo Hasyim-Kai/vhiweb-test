@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import s from "./login.module.scss";
 
-export default function Login() {
+export default function LoginPage() {
   const navigate = useNavigate();
   const { isLoading, data, isSuccess, error, mutate } = useMutation((data: loginInput) => fetchLogin(data));
   const [input, setInput] = useState<loginInput>({
