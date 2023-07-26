@@ -1,8 +1,9 @@
 @use "../../../styles/mixins" as m;
 
 .list_container {
-    padding: 2rem 0;
-    @include m.grid(1rem, 3);
+    padding: 1rem .5rem;
+    margin-inline: auto;
+    @include m.grid(1rem, 1);
 }
 
 .page_btn {
@@ -51,14 +52,28 @@
     text-align: center;
 
     .photo_profile {
-        width: 20rem;
-        height: 20rem;
+        width: 17rem;
+        height: 17rem;
         @include m.shadow();
 
         img {
             height: 100%;
             width: 100%;
             object-fit: cover;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .list_container {
+        padding: 2rem 0;
+        @include m.grid(1rem, 3);
+    }
+
+    .detail_container {
+        .photo_profile {
+            width: 20rem;
+            height: 20rem;
         }
     }
 }
