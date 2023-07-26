@@ -24,3 +24,10 @@
 .logout {
     @include m.base-btn(1.3em);
 }
+
+.container_404,
+.loading {
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 2em;
+}

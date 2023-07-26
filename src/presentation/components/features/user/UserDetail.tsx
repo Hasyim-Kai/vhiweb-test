@@ -5,6 +5,7 @@ import DefaultLayout from "../../../layout/default";
 import s from "./user.module.scss";
 import scrollToTop from "../../../../util/scrollToTop";
 import { useEffect } from "react";
+import Loading from "../../global/Loading";
 
 export default function UserDetail() {
     const { id } = useParams();
@@ -13,12 +14,12 @@ export default function UserDetail() {
         queryFn: () => fetchUsersDetail(id),
     })
     useEffect(() => {
-      scrollToTop()
+        scrollToTop()
     }, [])
-    
+
 
     return <DefaultLayout isBack>
-        {isLoading ? <div>Loading</div>
+        {isLoading ? <Loading />
             : error ? <div>Error</div>
                 : <section className={s.detail_container}>
                     <div className={s.photo_profile}>
