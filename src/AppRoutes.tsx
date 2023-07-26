@@ -8,8 +8,8 @@ export default function AppRoutes() {
   return <BrowserRouter>
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="user" element={<UserList />} />
-      <Route path="user/:id" element={<UserDetail />} />
+      <Route path="users" element={<UserList />} />
+      <Route path="users/:id" element={<UserDetail />} />
       <Route path="*" element={<NoPage />} />
     </Routes>
   </BrowserRouter>
